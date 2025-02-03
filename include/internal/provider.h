@@ -38,8 +38,6 @@ void ossl_provider_free(OSSL_PROVIDER *prov);
 
 /* Setters */
 int ossl_provider_set_module_path(OSSL_PROVIDER *prov, const char *module_path);
-int ossl_provider_add_parameter(OSSL_PROVIDER *prov, const char *name,
-                                const char *value);
 
 int ossl_provider_is_child(const OSSL_PROVIDER *prov);
 int ossl_provider_set_child(OSSL_PROVIDER *prov, const OSSL_CORE_HANDLE *handle);
@@ -74,7 +72,6 @@ const char *ossl_provider_name(const OSSL_PROVIDER *prov);
 const DSO *ossl_provider_dso(const OSSL_PROVIDER *prov);
 const char *ossl_provider_module_name(const OSSL_PROVIDER *prov);
 const char *ossl_provider_module_path(const OSSL_PROVIDER *prov);
-void *ossl_provider_prov_ctx(const OSSL_PROVIDER *prov);
 const OSSL_DISPATCH *ossl_provider_get0_dispatch(const OSSL_PROVIDER *prov);
 OSSL_LIB_CTX *ossl_provider_libctx(const OSSL_PROVIDER *prov);
 
